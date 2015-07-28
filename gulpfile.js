@@ -133,9 +133,6 @@ gulp.task('html', function () {
     .pipe($.if('*.css', $.cssmin()))
     .pipe(assets.restore())
     .pipe($.useref())
-    // Minify Any HTML
-    .pipe($.if('*.html', $.minifyHtml({
-    })))
     // Output Files
     .pipe(gulp.dest('dist'))
     .pipe($.size({title: 'html'}));
