@@ -41,9 +41,8 @@ body {
   justify-content: flex-start;
 }
 
-.info-container svg {
+.info-container .stick-man {
   margin-top: 35px;
-
 }
 
 .education-card {

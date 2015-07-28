@@ -1,4 +1,4 @@
-<link rel="import" href="../polymer/polymer.html"><link rel="import" href="../paper-styles/paper-styles.html"><dom-module id="paper-input-container"><style>
+<link rel=import href=../polymer/polymer.html><link rel=import href=../paper-styles/paper-styles.html><dom-module id=paper-input-container><style>
 
     :host {
       display: block;
@@ -152,7 +152,7 @@
       color: var(--paper-input-container-focus-color, --default-primary-color);
     }
 
-  </style><template><template is="dom-if" if="[[!noLabelFloat]]"><div class="floated-label-placeholder">&nbsp;</div></template><div class$="[[_computeInputContentClass(noLabelFloat,alwaysFloatLabel,focused,invalid,_inputHasContent)]]"><content select=":not([add-on])"></content></div><div class$="[[_computeUnderlineClass(focused,invalid)]]"><div class="unfocused-line fit"></div><div class="focused-line fit"></div></div><div class$="[[_computeAddOnContentClass(focused,invalid)]]"><content id="addOnContent" select="[add-on]"></content></div></template></dom-module><script>
+  </style><template><template is=dom-if if=[[!noLabelFloat]]><div class=floated-label-placeholder>&nbsp;</div></template><div class$=[[_computeInputContentClass(noLabelFloat,alwaysFloatLabel,focused,invalid,_inputHasContent)]]><content select=:not([add-on])></content></div><div class$=[[_computeUnderlineClass(focused,invalid)]]><div class="unfocused-line fit"></div><div class="focused-line fit"></div></div><div class$=[[_computeAddOnContentClass(focused,invalid)]]><content id=addOnContent select=[add-on]></content></div></template></dom-module><script>
 (function() {
 
   Polymer({

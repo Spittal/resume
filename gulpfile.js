@@ -135,9 +135,6 @@ gulp.task('html', function () {
     .pipe($.useref())
     // Minify Any HTML
     .pipe($.if('*.html', $.minifyHtml({
-      quotes: true,
-      empty: true,
-      spare: true
     })))
     // Output Files
     .pipe(gulp.dest('dist'))
