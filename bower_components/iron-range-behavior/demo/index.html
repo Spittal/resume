@@ -1,10 +1,10 @@
-<!doctype html><html><head><title>iron-range-behavior demo</title><script src="../../webcomponentsjs/webcomponents-lite.js"></script><link rel="import" href="../iron-range-behavior.html"><link rel="import" href="../../iron-input/iron-input.html"><style>
+<!doctype html><html><head><title>iron-range-behavior demo</title><script src=../../webcomponentsjs/webcomponents-lite.js></script><link rel=import href=../iron-range-behavior.html><link rel=import href=../../iron-input/iron-input.html><style>
 
       body {
         font-family: sans-serif;
       }
 
-    </style></head><body unresolved=""><dom-module id="x-progressbar"><style>
+    </style></head><body unresolved><dom-module id=x-progressbar><style>
         :host {
           display: block;
           height: 40px;
@@ -26,7 +26,7 @@
           font-size: 18px;
           color: #fff;
         }
-      </style><template><div class="progress" horizontal="" center="" layout="" style$="{{_computeStyle(ratio)}}"><div class="progress-value"><span>{{ratio}}</span>%</div></div></template></dom-module><script>
+      </style><template><div class=progress horizontal center layout style$={{_computeStyle(ratio)}}><div class=progress-value><span>{{ratio}}</span>%</div></div></template></dom-module><script>
       HTMLImports.whenReady(function() {
         Polymer({
           is: 'x-progressbar',
@@ -38,4 +38,4 @@
           }
         });
       });
-    </script><x-progressbar min="0" max="200" value="120"></x-progressbar></body></html>
+    </script><x-progressbar min=0 max=200 value=120></x-progressbar></body></html>

@@ -1,4 +1,4 @@
-<!doctype html><html><head><title>neon-animated-pages demo: declarative</title><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes"><script src="../../../webcomponentsjs/webcomponents-lite.js"></script><link rel="import" href="../../../paper-styles/paper-styles.html"><link rel="import" href="../../neon-animated-pages.html"><link rel="import" href="../../neon-animatable.html"><link rel="import" href="../../neon-animations.html"><style>
+<!doctype html><html><head><title>neon-animated-pages demo: declarative</title><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1"><meta name=viewport content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes"><script src=../../../webcomponentsjs/webcomponents-lite.js></script><link rel=import href=../../../paper-styles/paper-styles.html><link rel=import href=../../neon-animated-pages.html><link rel=import href=../../neon-animatable.html><link rel=import href=../../neon-animations.html><style>
 
       body {
         overflow: hidden;
@@ -8,7 +8,7 @@
         padding: 8px;
       }
 
-    </style><style is="custom-style">
+    </style><style is=custom-style>
 
       neon-animatable {
         color: white;
@@ -37,7 +37,7 @@
         background: var(--paper-purple-500);
       }
 
-    </style></head><body class="fullbleed layout vertical"><template is="dom-bind"><div class="toolbar"><button on-click="_onPrevClick">&lt;&lt;</button> <button on-click="_onNextClick">&gt;&gt;</button></div><neon-animated-pages id="pages" class="flex" selected="[[selected]]" entry-animation="[[entryAnimation]]" exit-animation="[[exitAnimation]]"><neon-animatable>1</neon-animatable><neon-animatable>2</neon-animatable><neon-animatable>3</neon-animatable><neon-animatable>4</neon-animatable><neon-animatable>5</neon-animatable></neon-animated-pages></template><script>
+    </style></head><body class="fullbleed layout vertical"><template is=dom-bind><div class=toolbar><button on-click=_onPrevClick>&lt;&lt;</button> <button on-click=_onNextClick>&gt;&gt;</button></div><neon-animated-pages id=pages class=flex selected=[[selected]] entry-animation=[[entryAnimation]] exit-animation=[[exitAnimation]]><neon-animatable>1</neon-animatable><neon-animatable>2</neon-animatable><neon-animatable>3</neon-animatable><neon-animatable>4</neon-animatable><neon-animatable>5</neon-animatable></neon-animated-pages></template><script>
 
       var scope = document.querySelector('template[is="dom-bind"]');
       scope.selected = 0;
