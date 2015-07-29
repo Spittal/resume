@@ -113,7 +113,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
             <section data-route="personal">
 
-              <h1>Basic Info</h1>
+              <h1 class="card-header">Basic Info</h1>
 
               <paper-material elevation="1">
                 <div class="info-container flex-container">
@@ -138,6 +138,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                       <span>Jamie, Jimmy, Spits, Spitoon, ect...</span>
                       <h4>Date of Birth:</h4>
                       <span>April 15, 1991</span>
+                      <h4>Current Location:</h4>
+                      <span>Vancouver BC Canada</span>
                       <h4>Contact:</h4>
                       <div>
                         <iron-icon icon="communication:email"></iron-icon>
@@ -156,7 +158,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
               </paper-material>
 
-              <h1>Relevant Experience/Projects</h1>
+              <h1 class="card-header">Relevant Experience/Projects</h1>
 
               <div class="flex-container card-grid">
 
@@ -234,7 +236,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
               </div>
 
-              <h1>Education</h1>
+              <h1 class="card-header">Education</h1>
 
               <div class="flex-container card-grid">
                 <paper-material class="education-card" elevation="1">
@@ -282,16 +284,16 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
             <section data-route="skills">
 
-              <h1>Skills</h1>
-              <h6>In Relation to One Another</h6>
+              <h1 class="card-header">Skills</h1>
+              <h6 class="card-header">In Relation to One Another</h6>
 
               <div class="float-container">
                 <paper-material class="skill-card" elevation="1">
                   <skill-chart percent="100" color="#61a6f9"></skill-chart>
                   <h3 class="center">100%</h3>
-                  <img class="skill-image" src="images/skills/google.png" alt="Over used logo? maybe." width="100%">
+                  <img class="skill-image" src="images/skills/google.png" alt="This is the most important skill, we all know it is." width="100%">
                   <h4 class="center">Google</h4>
-                  <p>Effectively using Google and website like Stack Overflow to find answers.</p>
+                  <p>Effectively using Google and websites like Stack Overflow to find answers.</p>
                 </paper-material>
 
                 <paper-material class="skill-card" elevation="1">
@@ -343,16 +345,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                 </paper-material>
               </div>
 
-              <h1>Additional Technical Skills</h1>
+              <h1 class="card-header">Additional Technical Skills</h1>
 
               <paper-material elevation="1">
                 <h5>Bootstrap</h5>
                 <h5>SCSS</h5>
                 <h5>Build systems like Gulp and Grunt</h5>
                 <h5>Apache and Nginx server set-up and maintainence</h5>
+                <h5>Cloud services like AWS and Google Cloud Platform</h5>
               </paper-material>
 
-              <h1>Personal Skills</h1>
+              <h1 class="card-header">Personal Skills</h1>
 
               <paper-material elevation="1">
                 <h5>Able to effectively work in a team</h5>
@@ -363,9 +366,72 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             </section>
 
             <section data-route="references">
-              <paper-material class="education-card" elevation="1">
-                <h2 class="paper-font-display2">Contact</h2>
-                <p>This is the contact section</p>
+
+              <h1 class="card-header">Alex Mason</h1>
+
+              <paper-material class="reference" elevation="1">
+                <div class="ref-avatar">
+                  <img src="images/ref/alex.jpeg" alt="Alex Mason">
+                </div>
+                <div class="ref-info">
+                  <h4>Relation:</h4>
+                  <span>Founder and CEO of Closefox</span>
+                  <h4>Comments:</h4>
+                  <span>Jamie worked with Alex for over a year building his idea Closefox from the groundup.</span>
+                  <h4>Contact:</h4>
+                  <div>
+                    <iron-icon icon="communication:email"></iron-icon>
+                    <a href="mailto:alex@closefox.com"> alex@closefox.com</a>
+                  </div>
+                  <div>
+                    <iron-icon icon="communication:phone"></iron-icon>
+                    <span> 503-516-5715</span>
+                  </div>
+                </div>
+              </paper-material>
+
+              <h1 class="card-header">Matt Hall</h1>
+
+              <paper-material class="reference" elevation="1">
+                <div class="ref-avatar">
+                  <img src="images/ref/matt.jpg" alt="Matt Hall">
+                </div>
+                <div class="ref-info">
+                  <h4>Relation:</h4>
+                  <span>Business Partner for Many Years</span>
+                  <h4>Comments:</h4>
+                  <span>Jamie and Matt worked together to create and operate <a href="http://randomshapes.com/">Random Shapes</a>, <a href="http://growlerfill.ca">Growler Fill</a>, <a href="http://ferriesapp.ca">Ferries</a> and various other projects</span>
+                  <h4>Contact:</h4>
+                  <div>
+                    <iron-icon icon="communication:email"></iron-icon>
+                    <a href="mailto:matt@kerplunc.com"> matt@kerplunc.com</a>
+                  </div>
+                  <div>
+                    <iron-icon icon="communication:phone"></iron-icon>
+                    <span> 604-401-2808</span>
+                  </div>
+                </div>
+              </paper-material>
+
+              <h1 class="card-header">Pindie Dhaliwal</h1>
+
+              <paper-material class="reference" elevation="1">
+                <div class="ref-avatar">
+                  <img src="images/ref/pindie.jpg" alt="Pindie Dhaliwal">
+                </div>
+                <div class="ref-info">
+                  <h4>Relation:</h4>
+                  <span>CMO at Closefox</span>
+                  <h4>Contact:</h4>
+                  <div>
+                    <iron-icon icon="communication:email"></iron-icon>
+                    <a href="mailto:pindie@closefox.com"> pindie@closefox.com</a>
+                  </div>
+                  <div>
+                    <iron-icon icon="communication:phone"></iron-icon>
+                    <span> 778-883-5550</span>
+                  </div>
+                </div>
               </paper-material>
             </section>
 

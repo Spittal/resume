@@ -22,6 +22,10 @@ body {
   text-align: center;
 }
 
+.card-header {
+  padding: 0 10px;
+}
+
 .app-name * {
   vertical-align: -15px;
 }
@@ -46,7 +50,7 @@ body {
 }
 
 .info-container .stick-man {
-  margin-top: 35px;
+  margin-top: 55px;
 }
 
 .education-card {
@@ -139,6 +143,26 @@ body {
   margin: 0 30px 30px 0 !important;
 }
 
+
+.ref-avatar {
+  vertical-align: middle;
+  display: inline-block;
+  width: 200px;
+}
+
+.ref-avatar img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.ref-info {
+  vertical-align: middle;
+  display: inline-block;
+  margin-left: 20px;
+  width: calc(100% - 230px);
+}
+
 @media (max-width: 950px) {
   .stick-man {
     margin: auto;
@@ -160,5 +184,17 @@ body {
     width: auto !important;
     flex: auto !important;
     margin: 0 0 0 0 !important;
+  }
+
+  .ref-avatar {
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+  }
+
+  .ref-info {
+    display: block;
+    margin-left: 0px;
+    width: 100%;
   }
 }
