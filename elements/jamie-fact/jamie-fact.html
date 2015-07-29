@@ -1,0 +1,97 @@
+<dom-module id="jamie-fact">
+
+  <style>
+
+  paper-material {
+    border-radius: 2px;
+    height: 100%;
+    padding: 16px 30px 16px 30px;
+    width: calc(98.66% - 16px);
+    margin: 16px auto;
+    background: white;
+  }
+
+  .title {
+    margin: 0;
+  }
+
+  .fact-image {
+    vertical-align: middle;
+    display: inline-block;
+    width: 100px;
+    margin-right: 30px;
+  }
+
+  .fact-image img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+
+  .fact-content {
+    vertical-align: middle;
+    display: inline-block;
+    width: calc(100% - 140px);
+  }
+
+  @media (max-width: 950px) {
+    .fact-image {
+      display: block;
+      width: 200px;
+      margin: 0 auto;
+    }
+
+    .fact-content {
+      display: block;
+      margin-left: 0px;
+      width: 100%;
+    }
+  }
+  </style>
+
+  <template>
+
+    <iron-ajax
+    url="jamie-fact.json"
+    handle-as="json"
+    on-response="handleResponse"></iron-ajax>
+
+    <paper-material elevation="1">
+      <h4 class="center title">Random Jamie Fact!</h4>
+      <div class="fact-image">
+        <img src$="{{imageUrl}}">
+      </div>
+      <div class="fact-content">
+        <h1>{{factTitle}}</h1>
+        <p>{{factContent}}</p>
+      </div>
+    </paper-material>
+
+  </template>
+
+  <script>
+    (function() {
+      Polymer({
+        is: 'jamie-fact',
+        handleResponse: function(response) {
+          console.log(response);
+        },
+        properties: {
+          factTitle: {
+            type: String,
+            value: 'Jamie is a huge idiot'
+          },
+          factContent: {
+            type: String,
+            value: 'He has spend at least 100 hours just sitting... doing nothing. Just sitting.'
+          },
+          imageUrl: {
+            type: String,
+            value: 'images/facts/tuba.jpg'
+          }
+        }
+      });
+    })();
+  </script>
+
+</dom-module>
