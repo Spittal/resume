@@ -7,7 +7,7 @@
       border-radius: 2px;
       height: 100%;
       padding: 16px 30px 16px 30px;
-      width: calc(98.66% - 16px);
+      width: calc(96% - 16px);
       margin: 16px auto;
       background: white;
     }
@@ -66,7 +66,7 @@
       </div>
       <div class="fact-content">
         <h1>{{fact.factTitle}}</h1>
-        <p>{{fact.factContent}}</p>
+        <p id="factMain"></p>
       </div>
     </paper-material>
 
@@ -80,7 +80,6 @@
         getJson: function() {
           var ajax = this.$.ajax;
           ajax.generateRequest();
-
         },
         properties: {
           fact: {
@@ -89,7 +88,9 @@
           }
         },
         computeFact: function(res) {
-          return res[Math.floor(Math.random() * res.length)];
+          var fact = res[Math.floor(Math.random() * res.length)];
+          this.$.factMain.innerHTML = fact.factContent;
+          return fact;
         },
         attached: function() {
           this.getJson();
