@@ -1,0 +1,12 @@
+[
+  {
+    "factTitle": "Polymer you say?",
+    "factContent": "This entire website has been coded in Polymer, by Google. That's pretty cool.",
+    "factImage": "images/skills/polymer.png"
+  },
+  {
+    "factTitle": "Tuba? that's weird",
+    "factContent": "Jamie has played tuba for thirteen years. Weird, I know.",
+    "factImage": "images/facts/tuba.jpg"
+  }
+]
