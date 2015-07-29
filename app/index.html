@@ -113,8 +113,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
             <section data-route="personal">
 
-              <skill-chart></skill-chart>
-
               <h1>Basic Info</h1>
 
               <paper-material elevation="1">
@@ -285,14 +283,46 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <section data-route="skills">
 
               <h1>Skills</h1>
+              <h6>In Relation to One Another</h6>
 
-              <paper-material elevation="1">
-                <p>this is a skill</p>
-              </paper-material>
+              <div class="float-container">
+                <paper-material class="skill-card" elevation="1">
+                  <skill-chart percent="100" color="#e44b25"></skill-chart>
+                  <h3 class="center">100%</h3>
+                  <img class="skill-image" src="images/skills/html.png" alt="Over used logo? maybe." width="100%">
+                  <h4 class="center">Core Web Technologies</h4>
+                  <p>HTML5, CSS3, Javascript, ES6, Jquery, PHP</p>
+                </paper-material>
+
+                <paper-material class="skill-card" elevation="1">
+                  <skill-chart percent="95" color="#b82833"></skill-chart>
+                  <h3 class="center">95%</h3>
+                  <img class="skill-image" src="images/skills/angular.jpg" alt="Angular is awesome" width="100%">
+                  <h4 class="center">Angular JS</h4>
+                  <p>Clean architecture, popular libraries like <a href="https://github.com/angular-ui/ui-router">Ui-Router.</a></p>
+                </paper-material>
+
+                <paper-material class="skill-card" elevation="1">
+                  <skill-chart percent="100" color="#e44b25"></skill-chart>
+                  <h3 class="center">100%</h3>
+                  <img class="skill-image" src="images/skills/html.png" alt="Over used logo? maybe." width="100%">
+                  <h4 class="center">Core Web Technologies</h4>
+                  <p>HTML5, CSS3, Javascript, ES6, Jquery, PHP</p>
+                </paper-material>
+
+                <paper-material class="skill-card" elevation="1">
+                  <skill-chart percent="100" color="#e44b25"></skill-chart>
+                  <h3 class="center">100%</h3>
+                  <img class="skill-image" src="images/skills/html.png" alt="Over used logo? maybe." width="100%">
+                  <h4 class="center">Core Web Technologies</h4>
+                  <p>HTML5, CSS3, Javascript, ES6, Jquery, PHP</p>
+                </paper-material>
+              </div>
+
             </section>
 
             <section data-route="references">
-              <paper-material elevation="1">
+              <paper-material class="education-card" elevation="1">
                 <h2 class="paper-font-display2">Contact</h2>
                 <p>This is the contact section</p>
               </paper-material>

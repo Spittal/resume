@@ -1,35 +1,74 @@
 <dom-module id="skill-chart">
 
-  <script src="../../bower_components/chart.js/Chart.js"></script>
-
   <style>
 
   </style>
 
   <template>
-    <svg class="myChart" width="400" height="200">
+    <svg class="myChart" width="300" height="50">
       <defs>
-          <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" style="stop-color:rgba(0,0,0,0);stop-opacity:0" />
-              <stop offset="50%" style="stop-color:rgba(0,0,0,0.75);stop-opacity:1" />
-              <stop offset="100%" style="stop-color:rgba(0,0,0,0);stop-opacity:0" />
-          </linearGradient>
+        <linearGradient id="myLinearGradient1" x1="0%" y1="0%" x2="100%" y2="0%" spreadMethod="pad">
+          <stop offset="0%" stop-color$="{{color}}" stop-opacity="1" />
+          <stop offset="100%" stop-color$="{{color2}}" stop-opacity="1" />
+        </linearGradient>
       </defs>
-      <line x1="0" y1="0" x2="{{percentPixel}}" y2="0" stroke-width="200" stroke="url(#grad1)">
+      <rect x="0" y="0" width$="{{pixel}}" height="50"
+     style="fill:url(#myLinearGradient1);
+            stroke: #005000;
+            stroke-width: 0;" />
     </svg>
   </template>
 
   <script>
-  (function () {
+    (function() {
       var element = Polymer({
         is: "skill-chart",
         properties: {
-          percentPixel: {
+          percent: {
             type: Number,
-            value: 300
+            value: 75
+          },
+          pixel: {
+            type: Number,
+            computed: 'computePercent(percent)'
+          },
+          color: {
+            type: String,
+            value: "#85a3ae"
+          },
+          color2: {
+            type: String,
+            computed: 'computeColor2(color)'
           }
         },
+        computePercent: function(percent) {
+          return percent * 3;
+        },
+        computeColor2(color) {
+          return ColorLuminance(color, 0.5);
+        }
       });
+
+
+      function ColorLuminance(hex, lum) {
+
+      	// validate hex string
+      	hex = String(hex).replace(/[^0-9a-f]/gi, '');
+      	if (hex.length < 6) {
+      		hex = hex[0]+hex[0]+hex[1]+hex[1]+hex[2]+hex[2];
+      	}
+      	lum = lum || 0;
+
+      	// convert to decimal and change luminosity
+      	var rgb = "#", c, i;
+      	for (i = 0; i < 3; i++) {
+      		c = parseInt(hex.substr(i*2,2), 16);
+      		c = Math.round(Math.min(Math.max(0, c + (c * lum)), 255)).toString(16);
+      		rgb += ("00"+c).substr(c.length);
+      	}
+
+      	return rgb;
+      }
     })();
   </script>
 
