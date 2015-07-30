@@ -50,14 +50,6 @@
 
   <template>
 
-    <iron-ajax
-      id="ajax"
-      url="../../scripts/jamie-fact.json"
-      handle-as="json"
-      last-response="{{response}}"
-      verbose="true">
-    </iron-ajax>
-
     <h4 class="card-header title">Random Jamie Fact!</h4>
 
     <paper-material elevation="1">
@@ -77,11 +69,84 @@
 
       Polymer({
         is: 'jamie-fact',
-        getJson: function() {
-          var ajax = this.$.ajax;
-          ajax.generateRequest();
-        },
         properties: {
+          response: {
+            type: Object,
+            /* jshint ignore:start */
+            value: [
+              {
+                "factTitle": "Polymer you say?",
+                "factContent": "This entire website has been coded in Polymer, by Google. That's pretty cool.",
+                "factImage": "images/skills/polymer.png"
+              },
+              {
+                "factTitle": "Tuba? that's weird",
+                "factContent": "Jamie has played tuba for thirteen years. Weird, I know.",
+                "factImage": "images/facts/tuba.jpg"
+              },
+              {
+                "factTitle": "Just a door",
+                "factContent": "Jamie once wrote an entire 10-minute long song using just a music sample of a door closing. You can listen to it <a href='https://soundcloud.com/notonemusic/door-song'>here</a>",
+                "factImage": "images/facts/door.jpg"
+              },
+              {
+                "factTitle": "Maximum Music",
+                "factContent": "Jamie is well versed in the visual coding language <a href='https://cycling74.com/products/max/'>Max by Cycling 74</a>. He often uses it to compose generative music!",
+                "factImage": "images/facts/max.jpg"
+              },
+              {
+                "factTitle": "Never forever alone!",
+                "factContent": "Jamie is the youngest of four kids",
+                "factImage": "images/facts/family.jpg"
+              },
+              {
+                "factTitle": "Misleading Photo",
+                "factContent": "Regardless of this epic photo of Jamie, he can't actually surf.",
+                "factImage": "images/facts/surf.jpg"
+              },
+              {
+                "factTitle": "A Solid Foundation",
+                "factContent": "Jamie can not only play electric bass guitar, he can also play stand up! What a stand up guy.",
+                "factImage": "images/facts/bass.jpg"
+              },
+              {
+                "factTitle": "Multi-Faceted",
+                "factContent": "Jamie has worked on several film sets as a boom op and mixer.",
+                "factImage": "images/facts/film.jpg"
+              },
+              {
+                "factTitle": "Right in the Meaty Part of the Bell Curve",
+                "factContent": "Jamie has completed the Grouse Grind in just under and hour. Impressed yet?",
+                "factImage": "images/facts/grind.jpg"
+              },
+              {
+                "factTitle": "Seperated at Birth",
+                "factContent": "Jamie and this dinosaur skeleton have the same smile.",
+                "factImage": "images/facts/dino.jpg"
+              },
+              {
+                "factTitle": "Sports!",
+                "factContent": "Jamie is an avid Ultimate Frisbee player. He also participates in Soccer.",
+                "factImage": "images/facts/frisbee.jpg"
+              },
+              {
+                "factTitle": "Snow Sticks",
+                "factContent": "Jamie loves to ski, he even owns a Whistler Blackcomb season pass.",
+                "factImage": "images/facts/ski.jpg"
+              },
+              {
+                "factTitle": "Ni Hao",
+                "factContent": "Jamie has been to China... twice!",
+                "factImage": "images/facts/china.jpg"
+              },
+              {
+                "factTitle": "Maybe the Flames Will Win This Year.",
+                "factContent": "Jamie was born and raised in Calgary Alberta",
+                "factImage": "images/facts/calgary.jpg"
+              }
+            ]
+            /* jshint ignore:end */
+          },
           fact: {
             type: Object,
             computed: 'computeFact(response)'
@@ -91,9 +156,6 @@
           var fact = res[Math.floor(Math.random() * res.length)];
           this.$.factMain.innerHTML = fact.factContent;
           return fact;
-        },
-        attached: function() {
-          this.getJson();
         }
       });
 
