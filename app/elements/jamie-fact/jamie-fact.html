@@ -13,7 +13,6 @@
     }
 
     .title {
-      margin: 0;
     }
 
     .fact-image {
@@ -53,14 +52,15 @@
 
     <iron-ajax
       id="ajax"
-      url="jamie-fact.json"
+      url="../../scripts/jamie-fact.json"
       handle-as="json"
       last-response="{{response}}"
       verbose="true">
     </iron-ajax>
 
+    <h4 class="card-header title">Random Jamie Fact!</h4>
+
     <paper-material elevation="1">
-      <h4 class="center title">Random Jamie Fact!</h4>
       <div class="fact-image">
         <img src$="{{fact.factImage}}">
       </div>
