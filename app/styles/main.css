@@ -186,6 +186,10 @@ body {
     margin: 0 0 0 0 !important;
   }
 
+  .skill-card {
+    margin: 0 0 30px 0 !important;
+  }
+
   .ref-avatar {
     display: block;
     width: 200px;
